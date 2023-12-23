@@ -5,7 +5,9 @@ html,body{
     color:white;
 }
 
-
+*{
+   /* border: 3px solid greenyellow; */
+}
 
 
 html{
@@ -47,36 +49,97 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: 3px dotted white;
+    width: 100%;
+    height: 100%;
 
 }
 
-.projects{
-    border-bottom: 3px dotted white;
+.about-me-text{
+    text-align: center;
 }
 
 
 
+.project > img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.project-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
 
 
+.sections > a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.sections > a::after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px white;  
+    transform: scaleX(0);  
+    transition: transform .2s ease-in-out;
+}
+
+.me > div{
+    user-select: none;
+    cursor: default;
+}
+
+article{
+    background-color: black;
+    border: 2px solid white;
+}
+
+.project-links{
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding-top: 15px;
+}
+
+.project-wrapper > article{
+    border-radius: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding: 15px;
+  padding-top: 0;
+}
+
+.project-arrow{
+    transform: rotate(45deg);
+    transition: transform .2s ease-in-out;
+
+}
+.project-arrow:hover{
+    transform: rotate(0deg);
+}
+
+a:hover:after{
+    transform: scaleX(1);
+}
 
 @media (max-width: 500px) {
     
 }
 
+@media screen and (min-width: 500px) and (max-width: 1000px) {
 
+  }
 
 @media (min-width: 1000px){
 
     .me > div{
         font-size: 24px;
-        border-bottom: 3px dotted white;
-    }
-
-    .header-line{
-        width: auto;
-        height: 2px;
-        background-color: white;
+        border-bottom: 3px solid white;
     }
 
     .my-work{
@@ -92,23 +155,7 @@ footer{
         line-height: 40px;
     }
 
-    a{
-        text-decoration: none;
-        color: white;
-        font-size: 24px;
-    }
 
-    a::after{
-        display:block;
-        content: '';
-        border-bottom: dotted 3px white;  
-        transform: scaleX(0);  
-        transition: transform .2s ease-in-out;
-    }
-
-    a:hover:after{
-        transform: scaleX(1);
-    }
 
 
     .sections{
@@ -118,16 +165,19 @@ footer{
 
     }
 
-    .project > img{
-
+    .project-wrapper{
+        gap: 48px;
     }
 
-    .project-wrapper{
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;
-        background-color: #fff;
-        color: #444;
+    .project >div > a > img{
+        height: 32px;
+        width: 32px;
+    }
+
+
+
+    .project{
+        max-width: 500px;
     }
 
 }
