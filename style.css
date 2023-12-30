@@ -27,12 +27,7 @@ header{
 }
 
 
-footer{
-    height: 100%;
-    width: auto;
-    padding: 5px;
 
-}
 
 .about,.projects,footer{
     display: flex;
@@ -70,7 +65,7 @@ footer{
 .sections > a{
     text-decoration: none;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .sections > a::after,.send-email-link::after{
@@ -96,14 +91,8 @@ article{
     border: 2px solid white;
 }
 
-.project-links{
-    display: flex;
-    justify-content: flex-end;
-    gap: 8px;
-    padding-top: 15px;
-    position: absolute;
-   bottom: 15px;
-   width: calc(100% - 30px);
+.contact-text{
+    text-align: center;
 }
 
 .project-wrapper > article{
@@ -133,11 +122,11 @@ article{
 .send-email-link{
     text-decoration: none;
     color: white;
-    font-size: 30px;
+
 }
 
 @media (max-width: 500px) {
-    .project >div > a > img{
+    .project > div > a > img{
         height: 32px;
         width: 32px;
     }
@@ -145,6 +134,25 @@ article{
     .project-wrapper{
         flex-direction: column;
     }
+    .project > img {
+        height: auto;
+        width: 100%;
+      }
+      .project-links {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        padding-top: 15px;
+      }
+      .send-email-link{
+        font-size: 20px;
+      }
+      .project-wrapper{
+        gap: 24px;
+      }
+      html{
+        padding: 15px;
+      }
 }
 
 @media screen and (min-width: 500px) and (max-width: 1000px) {
@@ -187,12 +195,25 @@ article{
         width: 32px;
     }
 
+    .send-email-link{
+        font-size: 30px;
+    }
 
 
     .project{
         max-width: 500px;
         min-height: 375px;
         position: relative;
+    }
+
+    .project-links{
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        padding-top: 15px;
+        position: absolute;
+       bottom: 15px;
+       width: calc(100% - 30px);
     }
 
 }
