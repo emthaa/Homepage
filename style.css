@@ -48,7 +48,6 @@ header{
 }
 
 .project > img{
-    
     height: 100%;
     width: 100%;
 }
@@ -58,6 +57,9 @@ header{
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+
+    align-items: stretch; /* This will make the children stretch to fill the container */
+
 
 }
 
@@ -186,8 +188,10 @@ article{
 
     }
 
+
+
     .project-wrapper{
-        gap: 48px;
+        gap: 24px;
     }
 
     .project >div > a > img{
@@ -202,8 +206,8 @@ article{
 
     .project{
         max-width: 500px;
-        min-height: 375px;
         position: relative;
+        flex: 1;
     }
 
     .project-links{
@@ -216,6 +220,11 @@ article{
        width: calc(100% - 30px);
     }
 
+
+    .project > img{
+        height: auto;
+        margin-bottom: 50px;
+    }
 }
 
 
